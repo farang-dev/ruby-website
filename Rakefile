@@ -4,3 +4,4 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+load File.expand_path('lib/tasks/routes.rake', __dir__)

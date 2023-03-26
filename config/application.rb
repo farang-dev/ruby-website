@@ -1,6 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
+require 'stock_quote'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -10,6 +11,8 @@ module Tester
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+
+    config.assets.precompile += %w( application.css )
 
     # Configuration for the application, engines, and railties goes here.
     #
