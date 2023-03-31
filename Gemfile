@@ -47,6 +47,8 @@ gem 'bootstrap', '~> 5.1.3'
 
 gem 'stock_quote', '~> 3.0'
 
+gem 'devise', '~> 4.9'
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"

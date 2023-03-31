@@ -1,5 +1,19 @@
-<h1>Stocking</h1>
-<p>Rails app is here</p>
+<h1>Quick Stock Data Search</h1>
 
-<%= @stock = StockQuote::Stock.company("fb") %>
-<%= @stock.inspect %>
+<%= form_tag root_path, :method => 'POST' do %>
+  <%= text_field_tag 'ticker', nil, placeholder: "Enter Ticker Symbol", size: 50 %>
+  <%= submit_tag 'Lookup' %>
+<% end %>
+
+<br/>
+
+<% if @stock %>
+  <%= @stock.company_name %> <br/>
+  <%= @stock.latest_price %> <br/>
+<% elsif @nothing %>
+  <%= @nothing %>
+<% end %>
+
+<% if @error %>
+  <%= @error %>
+<% end %>
