@@ -1,1 +1,1 @@
-//= require bootstrap-sprockets
+//= require bootstrap-sprockets 
